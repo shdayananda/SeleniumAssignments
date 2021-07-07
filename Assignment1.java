@@ -15,7 +15,7 @@ public class Assignment1 {
 			driver.get("https://www.ixigo.com/");
 			driver.manage().window().maximize();
 			Thread.sleep(2000);
-			driver.findElement(By.xpath("//a[href()='/trains']")).click();
+			driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/header/div/span[2]/nav/span[2]/a")).click();
 			//driver.quit();
 	}
 

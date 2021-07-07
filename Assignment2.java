@@ -12,10 +12,15 @@ public class Assignment2 {
 		driver.get("http://www.flipkart.com");
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com");
-		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
+		driver.navigate().back();
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println("Current URL :: " + currentUrl);
+		driver.navigate().forward();
+		driver.navigate().refresh();
+		//driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
 		//driver.navigate().to(“http://www.flipkart.com”);
 		//WebElement Ixio = driver.findElement(By.id("ixiLogoImg"));
-		//driver.quit();
+		driver.quit();
 
 		
 	}
